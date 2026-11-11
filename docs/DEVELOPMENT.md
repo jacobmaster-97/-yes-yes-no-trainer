@@ -39,4 +39,10 @@ GitHub 保存原始碼及版本；程式仍是本機執行。之前下載到裝�
 - `tests/`：完整流程、km/h 及暫停／逾時等回歸測試。
 - `package.json`、`package-lock.json`：只用於開發測試，不是離線訓練的依賴。
 
-目前未設置 GitHub Pages、自動部署或雲端同步；向 GitHub 提交程式碼不會改變既有的私人下載頁。
+## 網頁入口
+
+`index.html` 是 GitHub Pages 入口，會以相對路徑開啟根目錄的單一 HTML；`.nojekyll` 關閉 Jekyll 處理。訓練程式仍只有一份，修改時改 `yes-yes-no-trainer.html` 即可。
+
+Pages 必須由 GitHub 成功啟用（Settings → Pages → Deploy from a branch → main / root）才會發布；只有入口檔不代表網站已上線。可用性及設定權限由 GitHub 帳戶決定。
+
+尚未提供雲端紀錄同步。不同網站來源／本機檔案的 localStorage 不共用，移到網頁版前可先匯出原有紀錄。

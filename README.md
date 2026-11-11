@@ -12,7 +12,15 @@
 - 如受管理瀏覽器禁止 `file://`，可選擇以靜態伺服器開啟，例如 `python3 -m http.server 8000`，再到 `http://localhost:8000/yes-yes-no-trainer.html`。
 - iPad 的「檔案」Quick Look 預覽未必執行 JavaScript；請用可執行本機 HTML 的開啟方式，或以 Safari 開啟同一份 HTML 的靜態網站版本。網頁載入後可斷網訓練，但本版未提供 PWA 離線重新載入保證。
 
-GitHub 保存程式版本；你已下載的 HTML 不會自動更新。倉庫尚未設定 GitHub Pages 或自動部署，先前的私人下載頁也不會因 Git 提交而自動更新。
+GitHub 保存程式版本；你已下載的 HTML 不會自動更新。
+
+### GitHub Pages 網頁入口
+
+倉庫已有 `index.html` 及 `.nojekyll`。入口以相對路徑直接開啟同一份 `yes-yes-no-trainer.html`，沒有重複一份程式碼。
+
+如需啟用 GitHub Pages，在倉庫 **Settings → Pages → Build and deployment** 選 **Deploy from a branch**，Branch 選 **main**、目錄選 **/ (root)**，然後 Save。啟用完成後，以 GitHub 顯示的網址開啟；之後提交 `main` 會由 GitHub 重新發布。
+
+本次連接的 Pages 設定接口回覆 HTTP 403，因此不能把入口檔案存在等同於 Pages 已啟用。私人倉庫的 Pages 可用性亦由 GitHub 方案決定；不會為了啟用 Pages 而自動公開倉庫。
 
 ## 每球操作
 
