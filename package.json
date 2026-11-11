@@ -1,8 +1,8 @@
 {
   "name": "yes-yes-no-trainer",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "private": true,
-  "description": "離線棒球 Yes–Yes–No 出棒判斷訓練",
+  "description": "第一身棒球個人訓練紀錄：物理球路、投後自評及獨立好壞球紀錄",
   "scripts": {
     "test": "node tests/run.cjs"
   },

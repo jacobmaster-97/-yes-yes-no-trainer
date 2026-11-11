@@ -11,7 +11,7 @@
 
 在可存取此倉庫的 Codex 對話指定 GitHub 倉庫連結，說明要改的行為，例如：
 
-> 在 yes-yes-no-trainer 保留單一離線 HTML，新增一個球速預設，更新說明並跑測試。
+> 在 yes-yes-no-trainer 保留單一離線 HTML，調整第一身視角或個人紀錄欄位，更新說明並跑測試。
 
 GitHub 保存原始碼及版本；程式仍是本機執行。之前下載到裝置的 HTML 不會自動更新，需要重新下載。
 
@@ -34,7 +34,8 @@ GitHub 保存原始碼及版本；程式仍是本機執行。之前下載到裝�
 - `yes-yes-no-trainer.html`：程式本體，所有畫面、樣式和邏輯都內嵌。
 - `README.md`：操作、評分、資料儲存、球速換算及限制。
 - `CHANGELOG.md`：功能版本紀錄。
-- `docs/specification.md`：最初開發規格，實際後續需求以使用者最新指示為準。
+- `docs/specification.md`：V1 原始規格，實際需求以使用者最新指示為準。
+- `docs/v2-design.md`：V2 第一身、物理及投後自評設計。
 - `tests/`：完整流程、km/h 及暫停／逾時等回歸測試。
 - `package.json`、`package-lock.json`：只用於開發測試，不是離線訓練的依賴。
 
