@@ -16,11 +16,15 @@ GitHub 保存程式版本；你已下載的 HTML 不會自動更新。
 
 ### GitHub Pages 網頁入口
 
+**[直接開啟第一身個人訓練網頁](https://jacobmaster-97.github.io/-yes-yes-no-trainer/)**
+
+GitHub Pages 已啟用，來源為 `main` 分支的 `/ (root)`。
+
 倉庫已有 `index.html` 及 `.nojekyll`。入口以相對路徑直接開啟同一份 `yes-yes-no-trainer.html`，沒有重複一份程式碼。
 
 如需啟用 GitHub Pages，在倉庫 **Settings → Pages → Build and deployment** 選 **Deploy from a branch**，Branch 選 **main**、目錄選 **/ (root)**，然後 Save。啟用完成後，以 GitHub 顯示的網址開啟；之後提交 `main` 會由 GitHub 重新發布。
 
-本次連接的 Pages 設定接口回覆 HTTP 403，因此不能把入口檔案存在等同於 Pages 已啟用。私人倉庫的 Pages 可用性亦由 GitHub 方案決定；不會為了啟用 Pages 而自動公開倉庫。
+Pages 設定由倉庫擁有者在 GitHub 啟用；已核對首次建置及部署成功，首頁和 V2 HTML 均可正常讀取。後續提交 `main` 時，可在 Actions 的 `pages build and deployment` 查看發布進度。
 
 ## 每球操作
 

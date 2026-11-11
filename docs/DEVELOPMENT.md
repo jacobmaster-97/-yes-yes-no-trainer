@@ -43,6 +43,6 @@ GitHub 保存原始碼及版本；程式仍是本機執行。之前下載到裝�
 
 `index.html` 是 GitHub Pages 入口，會以相對路徑開啟根目錄的單一 HTML；`.nojekyll` 關閉 Jekyll 處理。訓練程式仍只有一份，修改時改 `yes-yes-no-trainer.html` 即可。
 
-Pages 必須由 GitHub 成功啟用（Settings → Pages → Deploy from a branch → main / root）才會發布；只有入口檔不代表網站已上線。可用性及設定權限由 GitHub 帳戶決定。
+目前 Pages 已由倉庫擁有者啟用，來源為 `main / root`，正式入口為 https://jacobmaster-97.github.io/-yes-yes-no-trainer/ 。更新 `main` 後，GitHub 的 `pages build and deployment` 工作流程會重新發布。設定入口為 Settings → Pages → Deploy from a branch。
 
 尚未提供雲端紀錄同步。不同網站來源／本機檔案的 localStorage 不共用，移到網頁版前可先匯出原有紀錄。
