@@ -1,0 +1,41 @@
+# 持續修改方式
+
+## 直接在 GitHub 改文字或簡單設定
+
+1. 開啟 `yes-yes-no-trainer.html`，按鉛筆圖示編輯。
+2. 只修改需要的部分，寫清楚提交說明；較大的改動可開新分支及 Pull Request。
+3. 透過提交紀錄檢查前後差異；如發現問題，可回復先前版本。
+4. 下載新版 HTML 到本機，以瀏覽器驗證操作。
+
+## 讓 Codex 繼續修改
+
+在可存取此倉庫的 Codex 對話指定 GitHub 倉庫連結，說明要改的行為，例如：
+
+> 在 yes-yes-no-trainer 保留單一離線 HTML，新增一個球速預設，更新說明並跑測試。
+
+GitHub 保存原始碼及版本；程式仍是本機執行。之前下載到裝置的 HTML 不會自動更新，需要重新下載。
+
+## 在電腦測試
+
+直接練習只需打開 HTML，不需要 Node.js。只有修改及跑自動化測試才需要以下工具。
+
+1. 安裝 Node.js 20 或以上。
+2. 在專案資料夾執行 `npm ci`。
+3. 執行 `npx playwright install chromium`；Linux 缺系統依賴時按 Playwright 提示安裝。
+4. 執行 `npm test`。
+
+測試優先使用 `CHROMIUM_PATH` 指定的執行檔、其次 Linux 常見 Chromium 路徑；其餘使用 Playwright 的 Chromium。
+例如 Linux：`CHROMIUM_PATH=/usr/bin/chromium npm test`。
+
+測試會以本機來源攔截載入 HTML，並在離線狀態檢查完整流程、輸入、時間及匯出。這種方法兼容會封鎖 `file://` 的受管理瀏覽器；仍應在實際目標裝置手動檢查本機檔案開啟方式。產物放在 `.test-artifacts/`，不提交至 Git。
+
+## 檔案
+
+- `yes-yes-no-trainer.html`：程式本體，所有畫面、樣式和邏輯都內嵌。
+- `README.md`：操作、評分、資料儲存、球速換算及限制。
+- `CHANGELOG.md`：功能版本紀錄。
+- `docs/specification.md`：最初開發規格，實際後續需求以使用者最新指示為準。
+- `tests/`：完整流程、km/h 及暫停／逾時等回歸測試。
+- `package.json`、`package-lock.json`：只用於開發測試，不是離線訓練的依賴。
+
+目前未設置 GitHub Pages、自動部署或雲端同步；向 GitHub 提交程式碼不會改變既有的私人下載頁。
